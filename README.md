@@ -3,7 +3,7 @@
 This project provides download and support to anyone (i.e. trainers) 
 who want to access the Fabrikam Fiber sample application, setup scripts, notes, etc.
 
-This is the same sample project that you can find in the various versions of 
+This is the same sample project that you can find in the various versions of
 [Brian Keller's VM](http://aka.ms/ALMVMs). It was designed to be imperfect 
 (i.e. contains bugs and surprises) allowing you to teach or tell a rich ALM story.
 
@@ -13,14 +13,14 @@ Fabrikam Fiber is a fictional company that provides cable television and
 related services to the United States. They are growing rapidly and have embraced 
 the latest Microsoft technologies in order to scale their customer-facing web site. 
 This will allow the end users to create/manage tickets and track technicians 
-in a self-service way. There is also an on-premises ASP.NET MVC application 
-for their customer service representatives to administer customer orders.
+in a self-service way.Â There is also an on-premises ASP.NET MVC application 
+for their customer service representatives to administer customerÂ orders.
 
 ## Sample Narrative
 
 You are part of the Development Team, which consists of 3-9 developers. 
 They have decided to use Visual Studio and its ALM tools to plan and track their work, 
-manage their source code, run their builds, and test their websites.
+manage their source code, run their builds, and test theirÂ websites.
 
 ## SQL Server LocalDB Support
 
