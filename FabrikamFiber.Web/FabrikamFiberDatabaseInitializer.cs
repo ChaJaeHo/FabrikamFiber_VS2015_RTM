@@ -17,7 +17,8 @@
             var employees = GetEmployees();
             employees.ForEach(e => context.Employees.Add(e));
 
-            var serviceTicket = context.ServiceTickets.Add(new ServiceTicket {
+            var serviceTicket = context.ServiceTickets.Add(new ServiceTicket
+            {
                 Title = "Modem keeps resetting itself",
                 Description = "About two months ago, I started getting randomly disconnected. My modem would lose its ONLINE green light, then the SEND light, then the RECEIVE, and then finally the POWER light would go and the modem would reset itself. I bought the new one wondering if it my old router might be the problem (it was fairly old). However, the problem still persists",
                 Status = Status.Assigned,
@@ -28,15 +29,15 @@
                 Opened = DateTime.Now.AddDays(-1),
                 Closed = null,
             });
-            
+
             context.ScheduleItems.Add(new ScheduleItem
-                                          {
-                                              Employee = employees[0], 
-                                              ServiceTicket = serviceTicket,
-                                              AssignedOn = DateTime.Now.AddDays(-1),
-                                              Start = DateTime.ParseExact("Mon 16 May 8:00 AM 2011", "ddd dd MMM h:mm tt yyyy", CultureInfo.InvariantCulture), 
-                                              WorkHours = 1
-                                          });
+            {
+                Employee = employees[0],
+                ServiceTicket = serviceTicket,
+                AssignedOn = DateTime.Now.AddDays(-1),
+                Start = DateTime.ParseExact("Mon 16 May 8:00 AM 2011", "ddd dd MMM h:mm tt yyyy", CultureInfo.InvariantCulture),
+                WorkHours = 1
+            });
 
             context.ServiceLogEntries.Add(new ServiceLogEntry
             {
@@ -49,7 +50,7 @@
             serviceTicket = context.ServiceTickets.Add(new ServiceTicket
             {
                 Title = "Internet Upload speed slow from 11pm-11am",
-                Description = "I'm extremely unhappy with the service I have recieved as of late from FabFiber. At night, my upload is garbage. I have the extreme 50 package and I'm only getting 1mb upload and anywhere from 1%-16% packetloss. This has been going on for a week and a half now.  I've had two techs come out here now and nobody seems to know what is going on.",
+                Description = "I'm extremely unhappy with the service I have received as of late from FabFiber. At night, my upload is garbage. I have the extreme 50 package and I'm only getting 1mb upload and anywhere from 1%-16% packetloss. This has been going on for a week and a half now.  I've had two techs come out here now and nobody seems to know what is going on.",
                 Status = Status.Closed,
                 EscalationLevel = 2,
                 Customer = customers[0],
@@ -58,7 +59,7 @@
                 Opened = DateTime.Now.AddDays(-1),
                 Closed = DateTime.Now.AddDays(2),
             });
-            
+
             context.ServiceLogEntries.Add(new ServiceLogEntry
             {
                 CreatedAt = DateTime.Now.AddDays(-1),
@@ -75,7 +76,7 @@
                 EscalationLevel = 1,
                 Customer = customers[1],
                 CreatedBy = employees[0],
-                ////AssignedTo = employees[0], It will throw an exeption to show the IntelliTrace stuff
+                ////AssignedTo = employees[0], It will throw an exception to show the IntelliTrace stuff
                 Opened = DateTime.Now.AddMinutes(-55),
                 Closed = null,
             });
@@ -160,7 +161,7 @@
                 Opened = DateTime.Now.AddMinutes(-55),
                 Closed = null,
             });
-            
+
             context.ScheduleItems.Add(new ScheduleItem
             {
                 Employee = employees[1],
@@ -190,7 +191,7 @@
                 Opened = DateTime.Now.AddDays(-1),
                 Closed = null,
             });
-            
+
             context.ScheduleItems.Add(new ScheduleItem
             {
                 Employee = employees[1],
@@ -250,7 +251,7 @@
                 Opened = DateTime.Now.AddMinutes(-55),
                 Closed = null,
             });
-            
+
             context.ScheduleItems.Add(new ScheduleItem
             {
                 Employee = employees[2],
